@@ -1,6 +1,6 @@
 #
 #controllers/nginx-deploy.yaml
-apiVersion: apps/v1
+apiVersion: apps/v1beta1
 kind: deployment
 metadata:
   name: nginx-deployment
