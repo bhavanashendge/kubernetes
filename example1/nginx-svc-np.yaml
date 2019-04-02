@@ -1,7 +1,7 @@
 #service
 #nginx-svc-np.yaml
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: my-service
   labels:

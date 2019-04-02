@@ -1,7 +1,7 @@
 #
 #controllers/nginx-deploy.yaml
-apiVersion: apps/v1beta1
-kind: deployment
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
@@ -20,4 +20,4 @@ spec:
         - name: nginx-container
           image: nginx:1.7.9
           ports:
-          - containerPort:80
+          - containerPort: 80
