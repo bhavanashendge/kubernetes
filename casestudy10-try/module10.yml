@@ -1,0 +1,23 @@
+#
+#controllers/nginx-deploy.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    app: employee_app-cluster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employee-app
+  template:
+    metadata:
+      labels:
+        app: employee-app
+    spec:
+      containers:
+        - name: employeeapp-container
+          image: devopsedu/employee
+          ports:
+          - containerPort: 8888
