@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-deployment
+  name: mongo
   labels:
     app: mongodb_app-cluster
 spec:
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongodb-app-svc
+  name: mongo
   labels:
     app: mongodb_app-svc
 spec:
   selector:
-    app: mongodb_app-cluster
+    app: mongodb-app
   type: NodePort
   ports:
   - nodePort: 31000

@@ -35,6 +35,6 @@ spec:
     app: employee-app
   type: NodePort
   ports:
-  - nodePort: 31000
+  - nodePort: 31001
     port: 8888
     targetPort: 8888
